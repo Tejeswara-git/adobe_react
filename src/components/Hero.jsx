@@ -78,9 +78,7 @@ const Hero = forwardRef((props, ref) => {
                         <span>Innovation of the Year</span>
                     </div>
                 </div>
-                <div className="hero-illustration">
-                    <img src="/images/a12.png" alt="Inspire the Future" style={{ width: '100%', height: '100%', objectFit: 'contain', position: 'relative', zIndex: 2 }} />
-                </div>
+
             </div>
         </section>
     );
