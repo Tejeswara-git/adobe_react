@@ -1,9 +1,26 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 
 const Hero = forwardRef((props, ref) => {
+    const images = ['/images/adobe1.jpg', '/images/adobe2.jpg'];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000); // Slide every 5 seconds
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
         <section className="hero" id="home">
             <div className="hero-bg">
+                {images.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`hero-bg-slide ${index === currentImageIndex ? 'active' : ''}`}
+                        style={{ backgroundImage: `url(${img})` }}
+                    ></div>
+                ))}
                 <div className="blob blob-1"></div>
                 <div className="blob blob-2"></div>
                 <div className="blob blob-3"></div>
@@ -78,7 +95,6 @@ const Hero = forwardRef((props, ref) => {
                         <span>Innovation of the Year</span>
                     </div>
                 </div>
-
             </div>
         </section>
     );
