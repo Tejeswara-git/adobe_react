@@ -235,13 +235,41 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  line-height: 0;
+}
+
+.navbar .nav-logo,
+.footer-brand .nav-logo {
+  background: rgba(10, 11, 26, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 4px 8px;
+}
+
+.nav-logo-image {
+  width: 255px;
+  max-width: 36vw;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  filter: brightness(1.18) contrast(1.32) saturate(1.22) drop-shadow(0 0 8px rgba(124, 58, 237, 0.32)) drop-shadow(0 0 6px rgba(249, 115, 22, 0.26));
+}
+
+.footer-logo-image {
+  width: 220px;
+  max-width: 55vw;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  filter: brightness(1.15) contrast(1.26) saturate(1.18) drop-shadow(0 0 7px rgba(124, 58, 237, 0.28)) drop-shadow(0 0 5px rgba(249, 115, 22, 0.22));
 }
 
 .logo-text {
@@ -1728,6 +1756,20 @@ h5 {
 }
 
 @media (max-width: 768px) {
+  .nav-logo-image {
+    width: 200px;
+    max-width: 48vw;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .footer-logo-image {
+    width: 180px;
+    max-width: 52vw;
+    height: 36px;
+    object-fit: contain;
+  }
+
   .nav-links {
     display: none;
     position: fixed;

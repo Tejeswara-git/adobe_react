@@ -8,20 +8,7 @@ const Navbar = ({ scrolled, activeSection }) => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
             <div className="nav-container">
                 <a href="#home" className="nav-logo">
-                    <div className="logo-icon">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                            <circle cx="18" cy="18" r="18" fill="url(#logoGrad)" />
-                            <path d="M18 8 L26 20 H10 Z" fill="white" opacity="0.9" />
-                            <circle cx="18" cy="24" r="4" fill="white" opacity="0.7" />
-                            <defs>
-                                <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
-                                    <stop offset="0%" stopColor="#7C3AED" />
-                                    <stop offset="100%" stopColor="#F97316" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <span className="logo-text">Adore</span>
+                    <img src="/images/adore-logo.png" alt="Adore logo" className="nav-logo-image" />
                 </a>
 
                 <div className={`nav-links ${navOpen ? 'open' : ''}`} id="nav-links">

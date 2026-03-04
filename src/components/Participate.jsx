@@ -5,7 +5,7 @@ const Participate = () => {
         <section className="ideas-hub" id="participate">
             <div className="section-container">
                 <div className="section-header">
-                    <div className="section-tag">Participate</div>
+                    <div className="section-tag" style={{ fontSize: '1rem' }}>Participate</div>
                     <h2 className="section-title">How You Can <span className="gradient-text">Participate</span></h2>
                     <p className="section-subtitle">Join our movement — share your ideas, develop your skills, and launch your dreams.</p>
                 </div>

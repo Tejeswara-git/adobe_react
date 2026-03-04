@@ -46,7 +46,7 @@ const Activities = forwardRef(({ impactGridRef }, ref) => {
             </div>
             <div className="section-container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="section-header light">
-                    <div className="section-tag light">Our Activities</div>
+                    <div className="section-tag light" style={{ fontSize: '2rem' }}>Our Activities</div>
                     <h2 className="section-title light">Recent <span className="gradient-text-light">Activities & Impact</span></h2>
                     <p className="section-subtitle light">Explore the wide range of activities we conduct to empower the next generation.</p>
                 </div>

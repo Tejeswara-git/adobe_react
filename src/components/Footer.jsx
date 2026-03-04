@@ -7,19 +7,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <a href="#home" className="nav-logo">
-                            <div className="logo-icon">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                    <circle cx="18" cy="18" r="18" fill="url(#fLogoGrad)" />
-                                    <circle cx="18" cy="24" r="4" fill="white" opacity="0.7" />
-                                    <defs>
-                                        <linearGradient id="fLogoGrad" x1="0" y1="0" x2="36" y2="36">
-                                            <stop offset="0%" stopColor="#7C3AED" />
-                                            <stop offset="100%" stopColor="#F97316" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <span className="logo-text">Adore</span>
+                            <img src="/images/adore-logo.png" alt="Adore logo" className="footer-logo-image" />
                         </a>
                         <p>ADORE is a global voluntary group of college students and professionals, who have come forward together to motivate the budding youth into taking positive action.</p>
                         <p className="footer-reg">Registered Non-profit Organisation</p>

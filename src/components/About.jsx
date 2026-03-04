@@ -21,7 +21,12 @@ const About = () => {
                     </div>
 
                     <div className="about-content">
-                        <div className="section-tag">About Adore</div>
+                        <div
+                            className="section-tag"
+                            style={{ fontSize: '1.5rem', display: 'block', width: 'fit-content', margin: '0 auto 1rem' }}
+                        >
+                            About Adore
+                        </div>
                         <h2 className="section-title">We Believe Every Youth Has a <span className="gradient-text">Brilliant Idea</span></h2>
                         <p className="about-text">
                             ADORE is a global voluntary group of college students and professionals, who have come forward together to motivate the budding youth into taking positive action.

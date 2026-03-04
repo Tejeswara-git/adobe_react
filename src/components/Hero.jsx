@@ -30,7 +30,7 @@ const Hero = forwardRef((props, ref) => {
             <div className="hero-container">
                 <div className="hero-badge">
                     <span className="badge-dot"></span>
-                    Empowering Youth Since 2015
+                    Empowering Youth Since 2014
                 </div>
                 <h1 className="hero-title">
                     Share Ideas.<br />
@@ -86,13 +86,6 @@ const Hero = forwardRef((props, ref) => {
                     <div className="fc-text">
                         <strong>Project Launched!</strong>
                         <span>EdTech for rural schools</span>
-                    </div>
-                </div>
-                <div className="floating-card card-3">
-                    <div className="fc-icon">🌟</div>
-                    <div className="fc-text">
-                        <strong>Youth Award</strong>
-                        <span>Innovation of the Year</span>
                     </div>
                 </div>
             </div>
