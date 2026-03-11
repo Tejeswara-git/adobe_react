@@ -25,7 +25,7 @@ const Contact = () => {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:5000/api/volunteers', {
+            const response = await fetch('https://adore-backend.onrender.com/api/volunteers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
