@@ -3,16 +3,60 @@ import React, { useState } from 'react';
 const Contact = () => {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+    const [error, setError] = useState(null);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        city: '',
+        hours: '',
+        qualifications: '',
+        domain: '',
+        source: ''
+    });
 
-    const handleFormSubmit = (e) => {
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         setSubmitting(true);
-        setTimeout(() => {
+        setError(null);
+
+        try {
+            const response = await fetch('http://localhost:5000/api/volunteers', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setFormSubmitted(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    mobile: '',
+                    city: '',
+                    hours: '',
+                    qualifications: '',
+                    domain: '',
+                    source: ''
+                });
+                e.target.reset();
+                setTimeout(() => setFormSubmitted(false), 5000);
+            } else {
+                setError(data.error || 'Something went wrong');
+            }
+        } catch (err) {
+            setError('Could not connect to the server. Is the backend running?');
+        } finally {
             setSubmitting(false);
-            setFormSubmitted(true);
-            e.target.reset();
-            setTimeout(() => setFormSubmitted(false), 4000);
-        }, 1500);
+        }
     };
 
     return (
@@ -55,38 +99,38 @@ const Contact = () => {
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Name *</label>
-                                <input type="text" placeholder="e.g. Rahul Sharma" required />
+                                <input type="text" name="name" placeholder="e.g. Rahul Sharma" required onChange={handleChange} />
                             </div>
                             <div className="form-group">
                                 <label>Email *</label>
-                                <input type="email" placeholder="e.g. rahul@email.com" required />
+                                <input type="email" name="email" placeholder="e.g. rahul@email.com" required onChange={handleChange} />
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Mobile No. *</label>
-                                <input type="tel" placeholder="e.g. +91 98765 43210" required />
+                                <input type="tel" name="mobile" placeholder="e.g. +91 98765 43210" required onChange={handleChange} />
                             </div>
                             <div className="form-group">
                                 <label>City</label>
-                                <input type="text" placeholder="Your City" />
+                                <input type="text" name="city" placeholder="Your City" onChange={handleChange} />
                             </div>
                         </div>
 
                         <div className="form-group">
                             <label>Most suitable hours for meeting/working (10 AM - 10 PM)</label>
-                            <input type="text" placeholder="e.g. 4 PM - 7 PM" />
+                            <input type="text" name="hours" placeholder="e.g. 4 PM - 7 PM" onChange={handleChange} />
                         </div>
 
                         <div className="form-group">
                             <label>Your Educational Qualifications - course, year *</label>
-                            <input type="text" placeholder="e.g. B.Tech CS, 2024" required />
+                            <input type="text" name="qualifications" placeholder="e.g. B.Tech CS, 2024" required onChange={handleChange} />
                         </div>
 
                         <div className="form-group">
                             <label>Domains interested in *</label>
-                            <select required defaultValue="">
+                            <select name="domain" required defaultValue="" onChange={handleChange}>
                                 <option value="" disabled>Select a domain...</option>
                                 <option value="volunteering">Volunteering/ Teaching</option>
                                 <option value="management">General Management</option>
@@ -99,7 +143,7 @@ const Contact = () => {
 
                         <div className="form-group">
                             <label>How did you get to know about ADORE *</label>
-                            <select required defaultValue="">
+                            <select name="source" required defaultValue="" onChange={handleChange}>
                                 <option value="" disabled>Select an option...</option>
                                 <option value="social">Social Media</option>
                                 <option value="web">Search Engine/Website</option>
@@ -121,6 +165,12 @@ const Contact = () => {
                         {formSubmitted && (
                             <div className="form-success" style={{ display: 'block' }}>
                                 <span>✅ Application sent! We'll get back to you shortly.</span>
+                            </div>
+                        )}
+
+                        {error && (
+                            <div className="form-error" style={{ display: 'block', color: '#ff4d4d', marginTop: '10px', fontSize: '0.9rem' }}>
+                                <span>❌ {Array.isArray(error) ? error.join(', ') : error}</span>
                             </div>
                         )}
                     </form>
