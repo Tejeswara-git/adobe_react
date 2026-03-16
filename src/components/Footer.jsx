@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <a href="#home" className="nav-logo">
-                            <img src="/images/adore-logo.png" alt="Adore logo" className="footer-logo-image" />
+                            <img src="/images/ADORE.png" alt="Adore logo" className="footer-logo-image" />
                         </a>
                         <p>ADORE is a global voluntary group of college students and professionals, who have come forward together to motivate the budding youth into taking positive action.</p>
                         <p className="footer-reg">Registered Non-profit Organisation</p>

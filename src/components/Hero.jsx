@@ -46,7 +46,7 @@ const Hero = forwardRef((props, ref) => {
                     <a href="#participate" className="btn-secondary">Share Your Idea</a>
                 </div>
 
-                <div className="hero-stats" ref={ref}>
+                {/* <div className="hero-stats" ref={ref}>
                     <div className="stat-item">
                         <span className="stat-number" data-target="12000">0</span>
                         <span className="stat-suffix">+</span>
@@ -70,7 +70,52 @@ const Hero = forwardRef((props, ref) => {
                         <span className="stat-suffix">%</span>
                         <span className="stat-label">Success Rate</span>
                     </div>
-                </div>
+                </div> */}
+
+
+
+                <div className="hero-stats" ref={ref}>
+    <div className="stat-item">
+        <div className="stat-value">
+            <span className="stat-number" data-target="12000">12,000</span>
+            <span className="stat-suffix">+</span>
+        </div>
+        <span className="stat-label">Youth Inspired</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+        <div className="stat-value">
+            <span className="stat-number" data-target="350">350</span>
+            <span className="stat-suffix">+</span>
+        </div>
+        <span className="stat-label">Ideas Funded</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+        <div className="stat-value">
+            <span className="stat-number" data-target="48">48</span>
+            <span className="stat-suffix"></span>
+        </div>
+        <span className="stat-label">Cities Reached</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+        <div className="stat-value">
+            <span className="stat-number" data-target="95">95</span>
+            <span className="stat-suffix">%</span>
+        </div>
+        <span className="stat-label">Success Rate</span>
+    </div>
+</div>
+
+
+
             </div>
 
             <div className="hero-visual">

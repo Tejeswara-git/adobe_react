@@ -8,7 +8,7 @@ const Navbar = ({ scrolled, activeSection }) => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
             <div className="nav-container">
                 <a href="#home" className="nav-logo">
-                    <img src="/images/adore-logo.png" alt="Adore logo" className="nav-logo-image" />
+                    <img src="/images/ADORE.png" alt="Adore logo" className="nav-logo-image" />
                 </a>
 
                 <div className={`nav-links ${navOpen ? 'open' : ''}`} id="nav-links">
