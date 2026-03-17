@@ -32,7 +32,7 @@ const About = () => {
                             ADORE is a global voluntary group of college students and professionals, who have come forward together to motivate the budding youth into taking positive action.
                         </p>
                         <p className="about-text">
-                            Founded in 2015, Adore provides a safe, inspiring platform where young people can share, develop, and launch ideas that create meaningful change in their communities and beyond.
+                            Founded in 2014, Adore provides a safe, inspiring platform where young people can share, develop, and launch ideas that create meaningful change in their communities and beyond.
                         </p>
                         <div className="about-values">
                             <div className="value-chip">🌟 Inspire</div>
