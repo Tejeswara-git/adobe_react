@@ -73,8 +73,8 @@ const Contact = () => {
 
                 <div className="contact-grid">
                     <div className="contact-info">
-                        <div className="contact-item" style={{ background: 'none', border: 'none', padding: 0, marginBottom: '1.5rem', transform: 'none' }}>
-                            <img src="/images/get-in-touch2.png" alt="Get in Touch" style={{ width: '100%', maxWidth: '350px', borderRadius: '15px', marginBottom: '1.5rem', boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }} />
+                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '1.5rem' }}>
+                            <img src="/images/get-in-touch2.png" alt="Get in Touch" style={{ width: '100%', maxWidth: '350px', borderRadius: '15px', marginBottom: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }} />
                             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: '1rem' }}>
                                 ADORE is a global voluntary group of college students and professionals, who have come forward together to motivate the budding youth into taking positive action.
                             </p>
