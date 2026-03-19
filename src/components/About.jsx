@@ -78,27 +78,31 @@ const About = () => {
 
                 {/* Team images — horizontal dropdown accordion */}
                 <div style={{
-                    maxHeight: teamOpen ? '400px' : '0px',
+                    maxHeight: teamOpen ? '500px' : '0px',
                     overflow: 'hidden',
                     transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                 }}>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'row',
+                        flexWrap: 'wrap',
                         gap: '1rem',
                         paddingTop: '2rem',
                         paddingBottom: '0.5rem',
                     }}>
                         {[
-                            '/images/team1.png',
-                            '/images/team2.jpg',
-                            '/images/team3.jpg',
-                            '/images/team4.jpg',
-                            '/images/team5.jpg',
-                            '/images/team6.jpg',
-                        ].map((src, i) => (
+                            { src: '/images/Md Rahman-Team leader.jpg',                          name: 'Md Rahman',             role: 'Team Leader' },
+                            { src: '/images/sanu kumar roy -Front end developer.jpg',            name: 'Sanu Kumar Roy',        role: 'Frontend Developer' },
+                            { src: '/images/Suchana Mondal-web developer.jpg',                   name: 'Suchana Mondal',        role: 'Web Developer' },
+                            { src: '/images/Shiv vardhan signh sikarwar-web developer.png',      name: 'Shiv Vardhan Singh',    role: 'Web Developer' },
+                            { src: '/images/Sayan guha -Backend developer.jpg',                  name: 'Sayan Guha',            role: 'Backend Developer' },
+                            { src: '/images/Sudipta ghosh-backend developer.jpg',                name: 'Sudipta Ghosh',         role: 'Backend Developer' },
+                            { src: '/images/Bhavani Pampana-Graphic designer.jpg',               name: 'Bhavani Pampana',       role: 'Graphic Designer' },
+                            { src: '/images/Immanuel Kumar-Graphic Designer.jpg',                name: 'Immanuel Kumar',        role: 'Graphic Designer' },
+                        ].map((member, i) => (
                             <div key={i} style={{
-                                flex: '1 1 0',
+                                flex: '1 1 calc(12.5% - 1rem)',
+                                minWidth: '130px',
                                 borderRadius: '14px',
                                 overflow: 'hidden',
                                 boxShadow: '0 8px 24px rgba(0,0,0,0.14)',
@@ -109,19 +113,17 @@ const About = () => {
                                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.14)'; }}
                             >
                                 <img
-                                    src={src}
-                                    alt={`Team ${i + 1}`}
-                                    style={{ width: '100%', height: '280px', objectFit: 'cover', display: 'block' }}
+                                    src={member.src}
+                                    alt={member.name}
+                                    style={{ width: '100%', height: '200px', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
                                 />
                                 <div style={{
-                                    padding: '10px 12px',
+                                    padding: '8px 10px',
                                     textAlign: 'center',
-                                    fontWeight: 600,
-                                    fontSize: '0.85rem',
-                                    color: 'var(--text-primary)',
                                     background: 'var(--bg-card)',
                                 }}>
-                                    Team {i + 1}
+                                    <div style={{ fontWeight: 700, fontSize: '0.8rem', color: 'var(--text-primary)' }}>{member.name}</div>
+                                    <div style={{ fontWeight: 400, fontSize: '0.72rem', color: 'var(--purple)', marginTop: '2px' }}>{member.role}</div>
                                 </div>
                             </div>
                         ))}
