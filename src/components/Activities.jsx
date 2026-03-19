@@ -100,6 +100,37 @@ const Activities = forwardRef(({ impactGridRef }, ref) => {
                         ))}
                     </div>
                 </div>
+
+                {/* Activity Photo Gallery — full width */}
+                <div style={{
+                    marginTop: '3rem',
+                    marginLeft: 'calc(-50vw + 50%)',
+                    marginRight: 'calc(-50vw + 50%)',
+                    width: '100vw',
+                }}>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'stretch',
+                        gap: 0,
+                    }}>
+                        {[
+                            '/images/a21.jpg', '/images/a22.png', '/images/a23.jpg', '/images/a24.jpg',
+                            '/images/a25.jpg', '/images/a26.jpg', '/images/a27.jpg', '/images/a28.jpg'
+                        ].map((src, i) => (
+                            <div key={i} style={{
+                                flex: '1 1 0',
+                                overflow: 'hidden',
+                                transition: 'transform 0.3s ease, filter 0.3s ease'
+                            }}
+                                onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.04)'; e.currentTarget.style.filter = 'brightness(1.1)'; }}
+                                onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.filter = 'brightness(1)'; }}
+                            >
+                                <img src={src} alt={`Activity ${i + 21}`} style={{ width: '100%', height: '320px', objectFit: 'cover', display: 'block' }} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );

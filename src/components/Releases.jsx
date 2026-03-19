@@ -27,6 +27,7 @@ const Releases = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
         </section>
     );
