@@ -112,12 +112,13 @@ h5 {
   padding: 14px 32px;
   background: linear-gradient(135deg, var(--purple), var(--purple-dark));
   color: white;
-  border-radius: 100px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
   font-family: 'Outfit', sans-serif;
+  width: 180px;
 }
 
 .btn-primary:hover {
@@ -187,7 +188,7 @@ h5 {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1rem, 3vw, 3rem);
   color: var(--text-primary);
   margin-bottom: 1rem;
 }
@@ -199,7 +200,7 @@ h5 {
 .section-subtitle {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 580px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -207,17 +208,86 @@ h5 {
   color: var(--text-secondary);
 }
 
+
+
+
+/* TOP BAR */
+/* TOP BAR FIXED */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 6px 20px;
+    background: #2b4c6f;
+
+}
+
+/* HIDE ANIMATION */
+.top-bar.hide {
+  transform: translateY(-100%);
+}
+
+/* LEFT BUTTONS */
+.top-left {
+  display: flex;
+  gap: 10px;
+}
+
+.top-btn {
+  background: #6ea0d6;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* CENTER TEXT */
+.top-center {
+  text-align: center;
+  flex: 1;
+  font-weight: 500;
+}
+
+.top-center span {
+  color: orange;
+  font-weight: 600;
+}
+
+/* RIGHT ICONS */
+.top-right {
+  display: flex;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.top-right i {
+  cursor: pointer;
+}
+
 /* ============================================================
    NAVBAR
    ============================================================ */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 42px;
+
   left: 0;
   right: 0;
   z-index: 1000;
   padding: 16px 0;
-  transition: var(--transition);
+  transition: top 0.3s ease;
+
+}
+.navbar.top {
+  top: 0;
 }
 
 .navbar.scrolled {
@@ -797,6 +867,7 @@ h5 {
 .about {
   padding: 100px 0;
   background: var(--bg-dark);
+  margin-top: 2px;
 }
 
 .about-grid {
@@ -815,6 +886,8 @@ h5 {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg), var(--shadow-glow);
+  height: 280px;
+  width: 500px;
 }
 
 .about-badge-float {
@@ -849,6 +922,7 @@ h5 {
 .about-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.2rem;
 }
 
@@ -1189,6 +1263,7 @@ h5 {
 .testimonial-track {
   position: relative;
   min-height: 200px;
+  padding-bottom: 80px;
 }
 
 .testimonial-card {
@@ -1197,7 +1272,7 @@ h5 {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(124, 58, 237, 0.15);
   border-radius: var(--radius-xl);
-  padding: 2.5rem;
+  padding: 2rem;
   display: none;
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);

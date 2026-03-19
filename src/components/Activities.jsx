@@ -6,26 +6,26 @@ const Activities = forwardRef(({ impactGridRef }, ref) => {
     const testimonials = [
         {
             avatar: 'RS',
-            img: '/images/download.jpg',
-            name: 'Rahul Sharma',
-            role: 'Idea Incubator Alumni, 2022',
-            quote: '"Adore gave me the confidence to believe in my idea. Their incubator program turned my dream into a real project that now impacts thousands of students."',
+            img: 'https://adoreglobal.org/assets/images/Volunteer/Volunteer(2).jpeg',
+            name: 'Chinaza Okoye',
+            role: 'Volunteer',
+            quote: '"My experience volunteering with ADORE. I have always wanted to be a part of something while growing up, maybe it’s the feeling of contributing to a bigger goal or helping people in distress, that connection to people is what ADORE offered me.Volunteering with ADORE has shaped my thinking and broadened my horizon."',
             bg: ''
         },
         {
             avatar: 'AM',
-            img: '/images/volunterr 2.jpg',
-            name: 'Ananya Mehta',
-            role: 'Leadership Camp Participant, 2023',
-            quote: '"The Youth Leadership Camp was transformative. I came in as a shy student and left as a confident leader ready to take on the world."',
+            img: 'https://adoreglobal.org/assets/images/team/team4.jpg',
+            name: 'Garima Mishra',
+            role: 'Volunteer',
+            quote: '"Working in ADORE exceeded my expectations, for here the learning is never ending, and the growth is limitless, Also got connected with so many influential personalities because of the webinars and workshops. I am grateful to this platform for believing me and trusting me with the task of leading the team in ADORE."',
             bg: '#F97316'
         },
         {
             avatar: 'PK',
-            img: '/images/adobe2.jpg',
-            name: 'Priya Kumar',
-            role: 'Mentor Connect Participant, 2023',
-            quote: '"My mentor through Adore helped me navigate challenges I couldn\'t have solved alone. I\'ve grown more in one year than in my entire college journey."',
+            img: 'https://adoreglobal.org/assets/images/Volunteer/Volunteer(1).jpeg',
+            name: 'Aliyu, Nigeria',
+            role: 'Volunteer',
+            quote: '"I am Aliyu from Nigeria. I am a volunteer at ADORE Volunteering with ADORE is a life changing experience. It has been my dream to be a teacher and ADORE have fulfilled that dream of mine.Thanks to ADORE, I will always be indebted to you!."',
             bg: '#10B981'
         }
     ];
