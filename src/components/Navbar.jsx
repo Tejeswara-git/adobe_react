@@ -9,9 +9,9 @@ const Navbar = ({scrolled, activeSection }) => {
       useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setHideTopBar(true);   // hide top bar
+                setHideTopBar(true);   
             } else {
-                setHideTopBar(false);  // show top bar
+                setHideTopBar(false);  
             }
         };
 
@@ -25,13 +25,13 @@ const Navbar = ({scrolled, activeSection }) => {
          <>
            
             <div className={`top-bar ${hideTopBar ? 'hide' : ''}`}>
+                {/* <div className="top-left">
+    <a href="https://adore.ivdata.in/signup.php?grp=GRP61&zone=Subscribers" className="top-btn">Newsletters</a>
+    <a href="https://adore.ivdata.in/" className="top-btn">Login</a>
+</div> */}
+
+
                 <div className="top-left">
-    <a href="/https://adore.ivdata.in/signup.php?grp=GRP61&zone=Subscribers" className="top-btn">Newsletters</a>
-    <a href="/https://adore.ivdata.in/" className="top-btn">Login</a>
-</div>
-
-
-                <div className="top-center">
                     Visit our latest <span>Webinars and Activities!</span>
                 </div>
 
