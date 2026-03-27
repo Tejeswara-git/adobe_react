@@ -46,7 +46,7 @@ const About = () => {
                             <a href="#programs" className="btn-primary">Learn More →</a>
 
                             {/* Team accordion trigger */}
-                            <button
+                            {/* <button
                                 onClick={() => setTeamOpen(!teamOpen)}
                                 style={{
                                     display: 'flex',
@@ -71,13 +71,13 @@ const About = () => {
                                     transform: teamOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                                     fontSize: '0.8rem',
                                 }}>▾</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>
 
                 {/* Team images — horizontal dropdown accordion */}
-                <div style={{
+                {/* <div style={{
                     maxHeight: teamOpen ? '500px' : '0px',
                     overflow: 'hidden',
                     transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -128,7 +128,7 @@ const About = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </section>
