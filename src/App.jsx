@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar';
@@ -11,23 +11,56 @@ import Activities from './components/Activities';
 import Releases from './components/Releases';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AboutPage from './components/pages/AboutPage';
+import TeamPage from './components/pages/TeamPage';
+import YoungLeadersPage from './components/pages/YoungLeadersPage';
+import WebinarsPage from './components/pages/WebinarsPage';
+import WorkshopsPage from './components/pages/WorkshopsPage';
+import ESessionsPage from './components/pages/ESessionsPage';
+import SunshinePage from './components/pages/SunshinePage';
+
+const pageRoutes = {
+  '/about': AboutPage,
+  '/team': TeamPage,
+  '/young-leaders': YoungLeadersPage,
+  '/webinars': WebinarsPage,
+  '/workshops': WorkshopsPage,
+  '/e-sessions': ESessionsPage,
+  '/sunshine': SunshinePage,
+};
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [countersStarted, setCountersStarted] = useState(false);
+  const [currentPage, setCurrentPage] = useState(() => window.location.hash || '#home');
 
   const heroStatsRef = useRef(null);
   const impactGridRef = useRef(null);
   const activitiesRef = useRef(null);
 
+  const isSubpage = currentPage.startsWith('#/');
+  const currentRoute = currentPage.replace('#', '');
+  const CurrentPageComponent = pageRoutes[currentRoute];
+
   useEffect(() => {
+    const handleHashChange = () => {
+      const nextHash = window.location.hash || '#home';
+      setCurrentPage(nextHash);
+      setActiveSection('home');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
 
+      if (window.location.hash.startsWith('#/')) {
+        return;
+      }
+
       const sections = document.querySelectorAll('section[id]');
       let current = '';
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const sectionTop = section.offsetTop - 120;
         if (window.scrollY >= sectionTop) current = section.id;
       });
@@ -35,15 +68,17 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('hashchange', handleHashChange);
 
-    // Initial hero counter
-    setTimeout(() => {
-      if (heroStatsRef.current) initCounters(heroStatsRef.current);
-    }, 800);
+    let heroTimer;
+    if (!isSubpage) {
+      heroTimer = setTimeout(() => {
+        if (heroStatsRef.current) initCounters(heroStatsRef.current);
+      }, 800);
+    }
 
-    // Intersection observers
     const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
@@ -53,17 +88,19 @@ function App() {
     const revealTargets = [
       '.program-card', '.idea-card', '.impact-card', '.team-card',
       '.contact-item', '.about-content', '.about-visual',
-      '.section-header', '.ideas-cta-box', '.volunteer-form'
+      '.section-header', '.ideas-cta-box', '.volunteer-form',
     ];
 
-    document.querySelectorAll(revealTargets.join(', ')).forEach((el, i) => {
-      el.classList.add('reveal');
-      el.style.transitionDelay = `${(i % 5) * 0.1}s`; // Simplified delay
-      revealObserver.observe(el);
-    });
+    if (!isSubpage) {
+      document.querySelectorAll(revealTargets.join(', ')).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${(i % 5) * 0.1}s`;
+        revealObserver.observe(el);
+      });
+    }
 
     const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting && !countersStarted) {
           setCountersStarted(true);
           if (impactGridRef.current) initCounters(impactGridRef.current);
@@ -72,13 +109,13 @@ function App() {
       });
     }, { threshold: 0.3 });
 
-    if (activitiesRef.current) counterObserver.observe(activitiesRef.current);
+    if (!isSubpage && activitiesRef.current) {
+      counterObserver.observe(activitiesRef.current);
+    }
 
-    // Particles
     const particlesContainer = document.getElementById('particles');
-    // Ensure we don't duplicate particles on re-renders
-    if (particlesContainer && particlesContainer.childElementCount === 0) {
-      for (let i = 0; i < 30; i++) {
+    if (!isSubpage && particlesContainer && particlesContainer.childElementCount === 0) {
+      for (let i = 0; i < 30; i += 1) {
         const p = document.createElement('span');
         const size = Math.random() * 4 + 1;
         const x = Math.random() * 100;
@@ -105,15 +142,17 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+      clearTimeout(heroTimer);
       revealObserver.disconnect();
       counterObserver.disconnect();
     };
-  }, [countersStarted]);
+  }, [countersStarted, isSubpage]);
 
   const initCounters = (container) => {
     const counters = container.querySelectorAll('[data-target]');
-    counters.forEach(counter => {
-      const target = parseInt(counter.dataset.target);
+    counters.forEach((counter) => {
+      const target = parseInt(counter.dataset.target, 10);
       animateCounter(counter, target);
     });
   };
@@ -134,23 +173,30 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar scrolled={scrolled} activeSection={activeSection} />
-      <Hero ref={heroStatsRef} />
-      <Marquee />
-      <About />
-      <Programs />
-      <Participate />
-      <Activities ref={activitiesRef} impactGridRef={impactGridRef} />
-      <Releases />
-      <Contact />
+      <Navbar scrolled={scrolled} activeSection={activeSection} currentPage={currentRoute} />
+      {isSubpage && CurrentPageComponent ? (
+        <CurrentPageComponent />
+      ) : (
+        <>
+          <Hero ref={heroStatsRef} />
+          <Marquee />
+          <About />
+          <Programs />
+          <Participate />
+          <Activities ref={activitiesRef} impactGridRef={impactGridRef} />
+          <Releases />
+          <Contact />
+        </>
+      )}
       <Footer />
 
-      {/* Back to Top */}
       <button
         className={`back-to-top ${scrolled ? 'visible' : ''}`}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="Back to top"
-      >↑</button>
+      >
+        ↑
+      </button>
     </div>
   );
 }
