@@ -314,8 +314,11 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
 
   const isDropdownActive = (menu) =>
     activeSection === menu.key || menu.items.some((item) => item.page === currentPage);
-  const solidNavbarPages = ['/about', '/team'];
+  const aboutPages = dropdownMenus.find((menu) => menu.key === 'about')?.items.map((item) => item.page) ?? [];
+  const programPages = dropdownMenus.find((menu) => menu.key === 'programs')?.items.map((item) => item.page) ?? [];
+  const solidNavbarPages = [...aboutPages, ...programPages];
   const hasSolidBackground = solidNavbarPages.includes(currentPage);
+  const isProgramPage = programPages.includes(currentPage);
 
   return (
     <>
@@ -364,7 +367,7 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
       </div>
 
       <nav
-        className={`navbar ${scrolled ? 'scrolled' : ''} ${hideTopBar ? 'top' : ''} ${hasSolidBackground ? 'solid' : ''}`}
+        className={`navbar ${scrolled ? 'scrolled' : ''} ${hideTopBar ? 'top' : ''} ${hasSolidBackground ? 'solid' : ''} ${isProgramPage ? 'program-page' : ''}`}
         id="navbar"
       >
         <div className="nav-container">

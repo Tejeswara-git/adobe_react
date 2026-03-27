@@ -362,9 +362,26 @@ h5 {
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
 }
 
-.navbar.scrolled .nav-link,
-.navbar.solid .nav-link {
+.navbar.scrolled .nav-link {
   color: var(--text-secondary);
+}
+
+.navbar.solid .nav-link,
+.navbar.solid .nav-dropdown-toggle a,
+.navbar.solid .nav-dropdown-button,
+.navbar.solid .nav-caret {
+  color: #000;
+}
+
+.navbar.program-page .nav-link,
+.navbar.program-page .nav-dropdown-toggle a,
+.navbar.program-page .nav-dropdown-button,
+.navbar.program-page .nav-caret,
+.navbar.program-page .nav-link:hover,
+.navbar.program-page .nav-link.active,
+.navbar.program-page .nav-dropdown-toggle.active,
+.navbar.program-page .nav-dropdown-toggle.active a {
+  color: #000;
 }
 
 .navbar.scrolled .nav-link:hover,
