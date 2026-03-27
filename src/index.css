@@ -353,7 +353,8 @@ h5 {
   top: 0;
 }
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar.solid {
   background: white;
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -361,12 +362,15 @@ h5 {
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
 }
 
-.navbar.scrolled .nav-link {
+.navbar.scrolled .nav-link,
+.navbar.solid .nav-link {
   color: var(--text-secondary);
 }
 
 .navbar.scrolled .nav-link:hover,
-.navbar.scrolled .nav-link.active {
+.navbar.scrolled .nav-link.active,
+.navbar.solid .nav-link:hover,
+.navbar.solid .nav-link.active {
   color: var(--purple);
 }
 
@@ -614,7 +618,8 @@ h5 {
   transition: var(--transition);
 }
 
-.navbar.scrolled .hamburger span {
+.navbar.scrolled .hamburger span,
+.navbar.solid .hamburger span {
   background: var(--purple);
 }
 
