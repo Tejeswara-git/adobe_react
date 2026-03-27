@@ -46,11 +46,33 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2024 Adore NGO. All rights reserved.</p>
+                    <p>© Copyright adoreglobal.org</p>
+                    <p>Powered by Simtrak Solutions</p>
                     <div className="footer-bottom-links">
                         <a href="#home">Privacy Policy</a>
                         <a href="#home">Terms of Use</a>
                     </div>
+
+                    <div className="top-right">
+    <a href="https://api.whatsapp.com/send/?phone=%2B917980460134&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/adoreearth/" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/adoretheearth/" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UCnmuSy5FJ64zojXAP2P3ttQ/featured" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/adore-official/" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-linkedin"></i>
+    </a>
+    <a href="https://x.com/AdoreEarth?t=kvxEaXb3QtcK41czb9itsA&s=08" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-twitter"></i>
+    </a>
+</div>
                 </div>
             </div>
         </footer>

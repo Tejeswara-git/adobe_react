@@ -2,11 +2,17 @@
    ADORE NGO — style.css
    =========================== */
 
+
+   html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* --- CSS Variables --- */
 :root {
-  --purple: #7C3AED;
-  --purple-dark: #6D28D9;
-  --purple-light: #7C3AED;
+  --purple: #2b4c6f;
+  --purple-dark: #1f3a57;
+  --purple-light: #3d6a94;
   --orange: #F97316;
   --orange-light: #EA6A00;
   --blue: #3B82F6;
@@ -155,6 +161,19 @@ h5 {
 }
 
 
+@media (max-width: 480px) {
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .top-btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}
+
+
 /* --- Section Commons --- */
 .section-container {
   max-width: 1200px;
@@ -208,7 +227,12 @@ h5 {
   color: var(--text-secondary);
 }
 
-
+@media (max-width: 768px) {
+  .section-title {
+    line-height: 1.3;
+    word-break: break-word;
+  }
+}
 
 
 /* TOP BAR */
@@ -256,7 +280,7 @@ h5 {
   font-weight: 500;
 }
 
-.top-center span {
+.top-left span {
   color: orange;
   font-weight: 600;
 }
@@ -264,12 +288,51 @@ h5 {
 /* RIGHT ICONS */
 .top-right {
   display: flex;
-  gap: 12px;
-  font-size: 1.1rem;
+  gap: 10px;
+  font-size: 1rem;
+  flex-wrap: nowrap; 
 }
 
 .top-right i {
-  cursor: pointer;
+ white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .top-left {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-center {
+    font-size: 0.75rem;
+  }
+
+  .top-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    text-align: center;
+  }
+
+  .top-left,
+  .top-right {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* ============================================================
@@ -344,6 +407,18 @@ h5 {
   display: block;
   image-rendering: -webkit-optimize-contrast;
   filter: contrast(1.15) saturate(1.1);
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    height: auto;
+  }
+
+  .nav-logo-image {
+    max-width: 140px;
+    height: auto;
+  }
 }
 
 .footer-logo-image {
@@ -554,7 +629,7 @@ h5 {
   position: relative;
   overflow: hidden;
   padding: 80px 0;
-  width: 100vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -564,6 +639,12 @@ h5 {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+}
+
+.hero-bg-slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
 .blob {
@@ -638,11 +719,11 @@ h5 {
 .hero-container {
   position: relative;
   z-index: 10;
-  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 0 24px;
+  max-width: 100%;
+  padding: 0 16px;
 }
 
 .hero-badge {
@@ -898,6 +979,29 @@ h5 {
   }
 }
 
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 16px 60px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* ============================================================
    MARQUEE
    ============================================================ */
@@ -1029,6 +1133,45 @@ h5 {
 .value-chip:hover {
   background: rgba(124, 58, 237, 0.25);
   transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-img-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-illustration {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .about-content {
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
 }
 
 /* ============================================================
@@ -1426,6 +1569,43 @@ h5 {
 .testi-dot.active {
   background: var(--purple);
   transform: scale(1.3);
+}
+
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 0 12px;
+  }
+
+  .testimonial-track {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .testimonial-card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .testi-quote {
+    font-size: 2.5rem;
+  }
+
+  .testi-author {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .testi-avatar {
+    margin: 0 auto;
+  }
 }
 
 /* ============================================================

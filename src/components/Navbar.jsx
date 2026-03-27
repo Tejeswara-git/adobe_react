@@ -65,10 +65,21 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
   const [hideTopBar, setHideTopBar] = useState(false);
   const closeTimer = useRef(null);
 
+<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = () => {
       setHideTopBar(window.scrollY > 50);
     };
+=======
+      useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setHideTopBar(true);   
+            } else {
+                setHideTopBar(false);  
+            }
+        };
+>>>>>>> b3c43b161ee10cac4ce98cd0283d831fcb027e65
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -82,6 +93,7 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
   const toggleNav = () => setNavOpen(!navOpen);
   const toggleDropdown = (key) => setOpenDropdown(openDropdown === key ? null : key);
 
+<<<<<<< HEAD
   const handleMouseEnter = (key) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpenDropdown(key);
@@ -155,6 +167,19 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
                   >
                     <span className="nav-caret">▾</span>
                   </button>
+=======
+         <>
+           
+            <div className={`top-bar ${hideTopBar ? 'hide' : ''}`}>
+                {/* <div className="top-left">
+    <a href="https://adore.ivdata.in/signup.php?grp=GRP61&zone=Subscribers" className="top-btn">Newsletters</a>
+    <a href="https://adore.ivdata.in/" className="top-btn">Login</a>
+</div> */}
+
+
+                <div className="top-left">
+                    Visit our latest <span>Webinars and Activities!</span>
+>>>>>>> b3c43b161ee10cac4ce98cd0283d831fcb027e65
                 </div>
 
                 <div className="nav-dropdown-menu">
