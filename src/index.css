@@ -1,4 +1,4 @@
-﻿/* ===========================
+/* ===========================
    ADORE NGO — style.css
    =========================== */
 
@@ -576,6 +576,58 @@ h5 {
   color: var(--purple);
   background: rgba(124, 58, 237, 0.08);
 }
+/* --- Flyout Sub-menu (e.g. Webinars inside Programs) --- */
+.nav-flyout-wrapper {
+  position: relative;
+}
+
+.nav-flyout-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+  user-select: none;
+}
+
+.nav-flyout-arrow {
+  font-size: 1.1rem;
+  margin-left: 6px;
+  color: var(--purple);
+  transition: transform 0.2s ease;
+}
+
+.nav-flyout-menu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 6px);
+  min-width: 200px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  box-shadow: 0 20px 40px rgba(33, 22, 73, 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1010;
+}
+
+.nav-flyout-wrapper:hover .nav-flyout-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.nav-flyout-wrapper:hover .nav-flyout-label {
+  color: var(--purple);
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 12px;
+}
+
 
 /* --- Volunteer Button Call to Action --- */
 #nav-volunteer {
