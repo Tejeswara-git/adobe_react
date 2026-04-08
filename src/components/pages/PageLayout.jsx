@@ -8,7 +8,10 @@ const PageLayout = ({ eyebrow, title, description, highlights = [], image, ctaLa
           <div className="subpage-copy">
             <div className="section-tag">{eyebrow}</div>
             <h1 className="section-title">{title}</h1>
-            <p className="section-subtitle">{description}</p>
+            {typeof description === 'string'
+              ? <p className="section-subtitle">{description}</p>
+              : <div className="section-subtitle">{description}</div>
+            }
             <div className="subpage-highlights">
               {highlights.map((item) => (
                 <div key={item} className="subpage-highlight">

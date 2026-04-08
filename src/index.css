@@ -2179,6 +2179,17 @@ h5 {
   gap: 1.5rem;
 }
 
+.subpage-copy .section-subtitle p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.subpage-copy .section-subtitle p:last-child {
+  margin-bottom: 0;
+}
+
 .subpage-highlights {
   display: flex;
   flex-wrap: wrap;
