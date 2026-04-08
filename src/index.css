@@ -498,8 +498,7 @@ h5 {
   color: white;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover::after {
   transform: scaleX(1);
 }
 
