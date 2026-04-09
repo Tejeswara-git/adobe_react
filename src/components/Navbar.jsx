@@ -122,52 +122,8 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
 
   return (
     <>
-      <div className={`top-bar ${hideTopBar ? 'hide' : ''}`}>
-        <div className="top-left">
-          <a href="https://adore.ivdata.in/signup.php?grp=GRP61&zone=Subscribers" className="top-btn">
-            Newsletters
-          </a>
-          <a href="https://adore.ivdata.in/" className="top-btn">
-            Login
-          </a>
-        </div>
-
-        <div className="top-center">
-          Visit our latest <span>Webinars and Activities!</span>
-        </div>
-
-        <div className="top-right">
-          <a
-            href="https://api.whatsapp.com/send/?phone=%2B917980460134&text&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-whatsapp"></i>
-          </a>
-          <a href="https://www.facebook.com/adoreearth/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/adoretheearth/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCnmuSy5FJ64zojXAP2P3ttQ/featured"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/adore-official/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://x.com/AdoreEarth?t=kvxEaXb3QtcK41czb9itsA&s=08" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-
       <nav
-        className={`navbar ${scrolled ? 'scrolled' : ''} ${hideTopBar ? 'top' : ''} ${hasSolidBackground ? 'solid' : ''} ${isProgramPage ? 'program-page' : ''}`}
+        className={`navbar ${scrolled ? 'scrolled' : ''} top ${hasSolidBackground ? 'solid' : ''} ${isProgramPage ? 'program-page' : ''}`}
         id="navbar"
       >
         <div className="nav-container">

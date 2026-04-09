@@ -43,7 +43,7 @@ const About = () => {
 
                         {/* Buttons row */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                            <a href="#programs" className="btn-primary">Learn More →</a>
+                            <a href="#/about" className="btn-primary">Learn More →</a>
 
                             {/* Team accordion trigger */}
                             {/* <button
