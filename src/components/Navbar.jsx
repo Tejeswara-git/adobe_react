@@ -78,6 +78,15 @@ const dropdownMenus = [
       { label: "YIP's", href: '#/yips', page: '/yips' },
     ],
   },
+  {
+    label: 'Contact',
+    href: '#contact',
+    key: 'contact',
+    items: [
+      { label: 'Contact Us', href: '#/contact_us', page: '/contact_us' },
+      { label: 'FAQs', href: '#/faqs', page: '/faqs' },
+    ],
+  },
 ];
 
 const Navbar = ({ scrolled, activeSection, currentPage }) => {
