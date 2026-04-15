@@ -1,12 +1,12 @@
 import React from 'react';
 
-const WebinarsPage = () => (
+const ActiveVolunteerPage = () => (
   <main className="subpage empty-page">
     <div className="section-container">
       <div className="empty-content">
         <div className="section-tag">Coming Soon</div>
-        <h1 className="section-title">Webinars</h1>
-        <p className="section-subtitle">We are preparing an exciting lineup of webinars. Check back soon for updates!</p>
+        <h1 className="section-title">Active Volunteers</h1>
+        <p className="section-subtitle">A dedicated space for our incredible volunteers is under development. Stay tuned!</p>
         <div className="empty-visual">
           <div className="empty-circle"></div>
           <div className="empty-circle"></div>
@@ -18,4 +18,4 @@ const WebinarsPage = () => (
   </main>
 );
 
-export default WebinarsPage;
+export default ActiveVolunteerPage;

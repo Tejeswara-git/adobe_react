@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar';
+import SecondaryNavbar from './components/SecondaryNavbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import About from './components/About';
@@ -18,6 +19,9 @@ import WebinarsPage from './components/pages/WebinarsPage';
 import WorkshopsPage from './components/pages/WorkshopsPage';
 import ESessionsPage from './components/pages/ESessionsPage';
 import SunshinePage from './components/pages/SunshinePage';
+import ActiveVolunteerPage from './components/pages/ActiveVolunteerPage';
+import AlumniPage from './components/pages/AlumniPage';
+import AssociateCenterPage from './components/pages/AssociateCenterPage';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -27,6 +31,9 @@ const pageRoutes = {
   '/workshops': WorkshopsPage,
   '/e-sessions': ESessionsPage,
   '/sunshine': SunshinePage,
+  '/active-volunteer': ActiveVolunteerPage,
+  '/alumni': AlumniPage,
+  '/associate-center': AssociateCenterPage,
 };
 
 function App() {
@@ -174,6 +181,7 @@ function App() {
   return (
     <div className="App">
       <Navbar scrolled={scrolled} activeSection={activeSection} currentPage={currentRoute} />
+      <SecondaryNavbar scrolled={scrolled} currentPage={currentRoute} />
       {isSubpage && CurrentPageComponent ? (
         <CurrentPageComponent />
       ) : (
