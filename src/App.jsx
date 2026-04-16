@@ -19,6 +19,11 @@ import WebinarsPage from './components/pages/WebinarsPage';
 import WorkshopsPage from './components/pages/WorkshopsPage';
 import ESessionsPage from './components/pages/ESessionsPage';
 import SunshinePage from './components/pages/SunshinePage';
+import WorkshopClgStudent from './components/pages/WorkshopClgStudent';
+import WorkshopSchool from './components/pages/WorkshopSchool';
+import WorkshopSenior from './components/pages/WorkshopSenior';
+import WorkshopHomemaker from './components/pages/WorkshopHomemaker';
+import BooksPage from './components/pages/Books';
 import ActiveVolunteerPage from './components/pages/ActiveVolunteerPage';
 import AlumniPage from './components/pages/AlumniPage';
 import AssociateCenterPage from './components/pages/AssociateCenterPage';
@@ -31,6 +36,11 @@ const pageRoutes = {
   '/workshops': WorkshopsPage,
   '/e-sessions': ESessionsPage,
   '/sunshine': SunshinePage,
+  '/our-books': BooksPage,
+  '/workshop-college': WorkshopClgStudent,
+  '/workshop-school': WorkshopSchool,
+  '/workshop-senior': WorkshopSenior,
+  '/workshop-homemakers': WorkshopHomemaker,
   '/active-volunteer': ActiveVolunteerPage,
   '/alumni': AlumniPage,
   '/associate-center': AssociateCenterPage,
