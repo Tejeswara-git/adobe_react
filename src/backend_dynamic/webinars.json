@@ -1,0 +1,39 @@
+{
+  "upcoming": [
+    {
+      "id": "w1",
+      "title": "Empowering Youth for a Sustainable Future",
+      "speaker": "Dr. Sarah Johnson",
+      "poster": "/images/a11.jpg",
+      "date": "2026-05-15",
+      "time": "5:00 PM IST"
+    },
+    {
+      "id": "w2",
+      "title": "Mental Health and Well-being in the Workplace",
+      "speaker": "Prof. David Miller",
+      "poster": "/images/a13.jpg",
+      "date": "2026-06-02",
+      "time": "6:30 PM IST"
+    }
+  ],
+  "past": [
+    {
+      "id": "p1",
+      "title": "Education for All: Bridging the Digital Divide",
+      "speaker": "Ms. Anjali Rao",
+      "poster": "/images/a14.jpg",
+      "date": "2026-03-20",
+      "summary": "Explored strategies to provide quality education in remote areas using technology."
+    },
+    {
+      "id": "p2",
+      "title": "The Role of NGOs in Community Development",
+      "speaker": "Mr. Robert Chen",
+      "poster": "/images/a15.jpg",
+      "date": "2026-02-10",
+      "summary": "Discussed how grassroots organizations can drive meaningful change in local communities."
+    }
+  ],
+  "registrations": []
+}

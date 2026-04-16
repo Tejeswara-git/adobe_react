@@ -1,21 +1,51 @@
 import React from 'react';
+import volunteerData from '../../data/volunteers.json';
 
-const ActiveVolunteerPage = () => (
-  <main className="subpage empty-page">
-    <div className="section-container">
-      <div className="empty-content">
-        <div className="section-tag">Coming Soon</div>
-        <h1 className="section-title">Active Volunteers</h1>
-        <p className="section-subtitle">A dedicated space for our incredible volunteers is under development. Stay tuned!</p>
-        <div className="empty-visual">
-          <div className="empty-circle"></div>
-          <div className="empty-circle"></div>
-          <div className="empty-circle"></div>
+const ActiveVolunteerPage = () => {
+  const { activeVolunteers } = volunteerData;
+
+  return (
+    <main className="subpage">
+      <div className="section-container">
+        <div className="section-header">
+          <div className="section-tag">Network</div>
+          <h1 className="section-title">
+            Our <span className="gradient-text">Active Volunteers</span>
+          </h1>
+          <p className="section-subtitle">
+            Meet the dedicated individuals who are making a difference across various fields and cities.
+          </p>
         </div>
-        <a href="#home" className="btn-primary">Back to Home</a>
+
+        <div className="demo-table-container">
+          <table className="demo-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Field Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              {activeVolunteers.map((v) => (
+                <tr key={v.id}>
+                  <td><strong>{v.name}</strong></td>
+                  <td>{v.city}</td>
+                  <td>
+                    <span className="tag-field">{v.fieldCategory}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
+
+        </div>
       </div>
-    </div>
-  </main>
-);
+    </main>
+  );
+};
 
 export default ActiveVolunteerPage;

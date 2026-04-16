@@ -1,0 +1,22 @@
+{
+  "activeVolunteers": [
+    { "id": 1, "name": "Aman Sharma", "city": "Delhi", "fieldCategory": "Education" },
+    { "id": 2, "name": "Priya Patel", "city": "Mumbai", "fieldCategory": "Healthcare" },
+    { "id": 3, "name": "Rahul Verma", "city": "Bangalore", "fieldCategory": "Environment" },
+    { "id": 4, "name": "Sneha Reddy", "city": "Hyderabad", "fieldCategory": "Social Welfare" },
+    { "id": 5, "name": "Vikram Singh", "city": "Jaipur", "fieldCategory": "Rural Development" },
+    { "id": 6, "name": "Ananya Sharma", "city": "Lucknow", "fieldCategory": "Women Empowerment" },
+    { "id": 7, "name": "Rohan Das", "city": "Kolkata", "fieldCategory": "Child Rights" },
+    { "id": 8, "name": "Kavita Nair", "city": "Kochi", "fieldCategory": "Education" }
+  ],
+  "alumni": [
+    { "id": 1, "name": "Ananya Gupta", "city": "Pune", "fieldCategory": "Education" },
+    { "id": 2, "name": "Karan Malhotra", "city": "Chennai", "fieldCategory": "Healthcare" },
+    { "id": 3, "name": "Ishita Das", "city": "Kolkata", "fieldCategory": "Legal Aid" },
+    { "id": 4, "name": "Arjun Mehra", "city": "Chandigarh", "fieldCategory": "Technology" },
+    { "id": 5, "name": "Meera Iyer", "city": "Ahmedabad", "fieldCategory": "Women Empowerment" },
+    { "id": 6, "name": "Sameer Khan", "city": "Bhopal", "fieldCategory": "Youth Leadership" },
+    { "id": 7, "name": "Tanvi Joshi", "city": "Surat", "fieldCategory": "Environment" },
+    { "id": 8, "name": "Aditya Rao", "city": "Mysore", "fieldCategory": "Public Policy" }
+  ]
+}
