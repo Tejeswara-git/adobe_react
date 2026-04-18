@@ -145,7 +145,7 @@ function App() {
           position: absolute;
           width: ${size}px;
           height: ${size}px;
-          background: ${Math.random() > 0.5 ? '#7C3AED' : '#F97316'};
+          background: ${Math.random() > 0.5 ? '#0ea5e9' : '#F97316'};
           border-radius: 50%;
           left: ${x}%;
           top: ${y}%;
