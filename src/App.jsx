@@ -29,6 +29,7 @@ import AlumniPage from './components/pages/AlumniPage';
 import AssociateCenterPage from './components/pages/AssociateCenterPage';
 import ReflectionsPage from './components/pages/Reflections';
 import FaqsPage from './components/pages/Faqs';
+import GrowingTogether from './components/pages/GrowingTogether';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -48,6 +49,7 @@ const pageRoutes = {
   '/associate-center': AssociateCenterPage,
   '/reflections': ReflectionsPage,
   '/faqs': FaqsPage,
+  '/growing-together': GrowingTogether,
 };
 
 function App() {
