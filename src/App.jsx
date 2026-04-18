@@ -27,6 +27,8 @@ import BooksPage from './components/pages/Books';
 import ActiveVolunteerPage from './components/pages/ActiveVolunteerPage';
 import AlumniPage from './components/pages/AlumniPage';
 import AssociateCenterPage from './components/pages/AssociateCenterPage';
+import ReflectionsPage from './components/pages/Reflections';
+import FaqsPage from './components/pages/Faqs';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -44,6 +46,8 @@ const pageRoutes = {
   '/active-volunteer': ActiveVolunteerPage,
   '/alumni': AlumniPage,
   '/associate-center': AssociateCenterPage,
+  '/reflections': ReflectionsPage,
+  '/faqs': FaqsPage,
 };
 
 function App() {
