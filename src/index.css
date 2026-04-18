@@ -2856,7 +2856,7 @@ h5 {
 .reflection-month {
   font-size: 1.3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--purple), var(--orange));
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
