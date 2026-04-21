@@ -48,20 +48,24 @@ const dropdownMenus = [
     href: '#participate',
     key: 'participate',
     items: [
+      { label: 'Active Volunteer', href: '#/active-volunteer', page: '/active-volunteer' },
+      { label: 'Alumni', href: '#/alumni', page: '/alumni' },
+      { label: 'Associate Center', href: '#/associate-center', page: '/associate-center' },
       { label: 'Workshop for College Students', href: '#/workshop-college', page: '/workshop-college' },
       { label: 'Workshop for School Students', href: '#/workshop-school', page: '/workshop-school' },
       { label: 'Workshop for Homemakers', href: '#/workshop-homemakers', page: '/workshop-homemakers' },
       { label: 'Workshop for Senior Citizens', href: '#/workshop-senior', page: '/workshop-senior' },
       { label: 'Workshop for Others', href: '#/workshop-others', page: '/workshop-others' },
+      
     ],
   },
   {
-    label: 'Activities',
-    href: '#activities',
-    key: 'activities',
+    label: 'Webinars',
+    href: '#Webinars',
+    key: 'webinars',
     items: [
-      { label: 'Upcoming Activities', href: '#/upcoming-activities', page: '/upcoming-activities' },
-      { label: 'Past Activities', href: '#/past-activities', page: '/past-activities' },
+      { label: 'Upcoming Webinars', href: '#/upcoming-webinars', page: '/upcoming-webinars' },
+      { label: 'Past Webinars', href: '#/past-webinars', page: '/past-webinars' },
     ],
   },
   {
@@ -85,6 +89,7 @@ const dropdownMenus = [
     items: [
       { label: 'Contact Us', href: '#/contact_us', page: '/contact_us' },
       { label: 'FAQs', href: '#/faqs', page: '/faqs' },
+      { label: 'Feedback', href: '#/feedback', page: '/feedback' },
     ],
   },
 ];

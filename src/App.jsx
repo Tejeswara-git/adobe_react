@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar';
-import SecondaryNavbar from './components/SecondaryNavbar';
+// import SecondaryNavbar from './components/SecondaryNavbar'; // Removed import
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import About from './components/About';
@@ -199,7 +199,7 @@ function App() {
   return (
     <div className="App">
       <Navbar scrolled={scrolled} activeSection={activeSection} currentPage={currentRoute} />
-      <SecondaryNavbar scrolled={scrolled} currentPage={currentRoute} />
+      {/* <SecondaryNavbar scrolled={scrolled} currentPage={currentRoute} /> */} 
       {isSubpage && CurrentPageComponent ? (
         <CurrentPageComponent />
       ) : (
