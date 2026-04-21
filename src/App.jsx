@@ -30,6 +30,7 @@ import AssociateCenterPage from './components/pages/AssociateCenterPage';
 import ReflectionsPage from './components/pages/Reflections';
 import FaqsPage from './components/pages/Faqs';
 import GrowingTogether from './components/pages/GrowingTogether';
+import AdorableKidsMagazine from './components/pages/AdorableKidsMagazine';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -50,6 +51,7 @@ const pageRoutes = {
   '/reflections': ReflectionsPage,
   '/faqs': FaqsPage,
   '/growing-together': GrowingTogether,
+  '/adorable-kids-magazine': AdorableKidsMagazine,
 };
 
 function App() {

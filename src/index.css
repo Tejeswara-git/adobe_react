@@ -946,6 +946,489 @@ h5 {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* ============================================================
+   ADORABLE KIDS MAGAZINE PAGE
+   ============================================================ */
+.subpage.adorable-magazine-page {
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.14), transparent 28%), radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.12), transparent 25%), #f8fbff;
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.magazine-intro {
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.magazine-intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.16), transparent 18%), radial-gradient(circle at 85% 12%, rgba(249, 115, 22, 0.14), transparent 16%);
+  pointer-events: none;
+}
+
+.magazine-intro .section-container {
+  position: relative;
+  z-index: 2;
+}
+
+.magazine-intro .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.magazine-intro .section-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.magazine-intro .section-tag.light {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--purple);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+.magazine-intro .section-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.magazine-intro .section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.magazine-selectors {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+  width:fit-content;
+  justify-content: center;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--purple-light), var(--purple));
+  border: 2px solid rgba(14, 165, 233, 0.25);
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.select-wrapper:hover {
+    transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.5);
+  background: linear-gradient(135deg, #38bdf8, var(--purple-light));
+}
+
+.select-wrapper span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.select-wrapper select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  appearance: none;
+  padding: 0.55rem 0;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+
+.select-wrapper::after {
+  content: '▾';
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: var(--bg-dark);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.select-wrapper select:focus + ::after,
+.select-wrapper:hover::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.magazine-hero {
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.magazine-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.16), transparent 18%), radial-gradient(circle at 85% 12%, rgba(249, 115, 22, 0.14), transparent 16%);
+  pointer-events: none;
+}
+
+.magazine-hero-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+}
+
+.magazine-copy {
+  max-width: 620px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.magazine-copy .section-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.magazine-copy .section-tag.light {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--purple);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+.magazine-copy .section-title {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  margin-bottom: 1rem;
+}
+
+.magazine-copy .section-subtitle {
+  max-width: 560px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.magazine-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.magazine-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.magazine-card {
+  padding: 1.4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(14, 165, 233, 0.2);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
+
+.magazine-card:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow:0 25px 60px rgba(4, 66, 151, 0.3);
+  transform: translateY(-3px);
+}
+
+.magazine-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.35rem;
+  color: var(--text-primary);
+}
+
+.magazine-card span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.magazine-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.magazine-actions .btn-secondary {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--purple);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.magazine-actions .btn-secondary:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: rgba(14, 165, 233, 0.5);
+}
+
+.magazine-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.magazine-visual::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.1), rgba(249, 115, 22, 0.08));
+  filter: blur(24px);
+  z-index: 0;
+}
+
+.magazine-shell {
+  width: 100%;
+  max-width: 380px;
+  padding: 1.8rem;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(14, 165, 233, 0.2);
+  box-shadow: 0 25px 60px rgba(69, 185, 253, 0.15);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.magazine-shell:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.magazine-shell::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 120px;
+  height: 120px;
+  background: rgba(14, 165, 233, 0.06);
+  border-radius: 40px;
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.magazine-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4.2;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px rgba(14, 165, 233, 0.08);
+}
+
+.magazine-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+  display: block;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.magazine-cover:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.magazine-details {
+  padding: 80px 0;
+}
+
+.magazine-details .section-container {
+  max-width: 1100px;
+}
+
+.magazine-details-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.magazine-overview {
+  background: white;
+  border-radius: 32px;
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.magazine-overview h3 {
+  margin-bottom: 1rem;
+  font-size: 1.95rem;
+}
+
+.magazine-overview p {
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.magazine-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.magazine-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+  background: rgba(14, 165, 233, 0.06);
+  border-radius: 22px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.magazine-highlight::before {
+  content: '•';
+  color: var(--orange);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.magazine-upload-card {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(249, 115, 22, 0.08));
+  border-radius: 32px;
+  padding: 2rem;
+  border: 1px dashed rgba(14, 165, 233, 0.2);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.magazine-upload-card strong {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.magazine-upload-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.magazine-upload-card .upload-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  font-weight: 700;
+  color: var(--purple-dark);
+}
+
+.magazine-upload-card .upload-pill span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+@media (max-width: 1024px) {
+  .magazine-hero-grid {
+    gap: 2rem;
+  }
+
+  .magazine-selectors {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  .magazine-visual {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .magazine-hero {
+    padding: 100px 0 60px;
+  }
+
+  .magazine-intro {
+    padding: 60px 0 40px;
+  }
+
+  .magazine-hero-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .magazine-selectors {
+    grid-template-columns: 1fr;
+  }
+
+  .magazine-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .magazine-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .magazine-copy .section-title {
+    font-size: 2.7rem;
+  }
+
+  .magazine-shell {
+    max-width: 100%;
+    padding: 1.4rem;
+  }
+
+  .magazine-details {
+    padding: 60px 0;
+  }
+}
+
 .hero-actions {
   display: flex;
   gap: 1.5rem;
