@@ -1,22 +1,72 @@
 {
   "activeVolunteers": [
-    { "id": 1, "name": "Aman Sharma", "city": "Delhi", "fieldCategory": "Education" },
-    { "id": 2, "name": "Priya Patel", "city": "Mumbai", "fieldCategory": "Healthcare" },
-    { "id": 3, "name": "Rahul Verma", "city": "Bangalore", "fieldCategory": "Environment" },
-    { "id": 4, "name": "Sneha Reddy", "city": "Hyderabad", "fieldCategory": "Social Welfare" },
-    { "id": 5, "name": "Vikram Singh", "city": "Jaipur", "fieldCategory": "Rural Development" },
-    { "id": 6, "name": "Ananya Sharma", "city": "Lucknow", "fieldCategory": "Women Empowerment" },
-    { "id": 7, "name": "Rohan Das", "city": "Kolkata", "fieldCategory": "Child Rights" },
-    { "id": 8, "name": "Kavita Nair", "city": "Kochi", "fieldCategory": "Education" }
+    {
+      "id": 1,
+      "name": "Aman Sharma",
+      "teamName": "Education Outreach",
+      "city": "Delhi",
+      "activities": "Organized 5 workshops in local schools, distributed 200 kits.",
+      "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Priya Patel",
+      "teamName": "Health Awareness",
+      "city": "Mumbai",
+      "activities": "Led 3 blood donation camps, reached over 1000 people.",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Rahul Verma",
+      "teamName": "Green Initiative",
+      "city": "Bangalore",
+      "activities": "Planted 500 trees across the city parks.",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Reddy",
+      "teamName": "Social Welfare",
+      "city": "Hyderabad",
+      "activities": "Coordinated food distribution for 50 families weekly.",
+      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop"
+    }
   ],
   "alumni": [
-    { "id": 1, "name": "Ananya Gupta", "city": "Pune", "fieldCategory": "Education" },
-    { "id": 2, "name": "Karan Malhotra", "city": "Chennai", "fieldCategory": "Healthcare" },
-    { "id": 3, "name": "Ishita Das", "city": "Kolkata", "fieldCategory": "Legal Aid" },
-    { "id": 4, "name": "Arjun Mehra", "city": "Chandigarh", "fieldCategory": "Technology" },
-    { "id": 5, "name": "Meera Iyer", "city": "Ahmedabad", "fieldCategory": "Women Empowerment" },
-    { "id": 6, "name": "Sameer Khan", "city": "Bhopal", "fieldCategory": "Youth Leadership" },
-    { "id": 7, "name": "Tanvi Joshi", "city": "Surat", "fieldCategory": "Environment" },
-    { "id": 8, "name": "Aditya Rao", "city": "Mysore", "fieldCategory": "Public Policy" }
+    {
+      "id": 1,
+      "name": "Ananya Gupta",
+      "teamName": "Education Excellence",
+      "city": "Pune",
+      "activities": "Initiated the 'Each One Teach One' program during her tenure.",
+      "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Karan Malhotra",
+      "teamName": "Medical Relief",
+      "city": "Chennai",
+      "activities": "Established the first mobile clinic in rural areas.",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+    }
+  ],
+  "associateCenters": [
+    {
+      "id": 1,
+      "name": "Global Education Center",
+      "teamName": "Strategic Partnership",
+      "city": "London",
+      "activities": "Partnered for international curriculum development.",
+      "photo": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Community Tech Hub",
+      "teamName": "Digital Literacy",
+      "city": "San Francisco",
+      "activities": "Provided technical training to over 200 underprivileged youth.",
+      "photo": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=400&fit=crop"
+    }
   ]
 }

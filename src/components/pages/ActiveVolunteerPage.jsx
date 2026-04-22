@@ -17,31 +17,27 @@ const ActiveVolunteerPage = () => {
           </p>
         </div>
 
-        <div className="demo-table-container">
-          <table className="demo-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>City</th>
-                <th>Field Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              {activeVolunteers.map((v) => (
-                <tr key={v.id}>
-                  <td><strong>{v.name}</strong></td>
-                  <td>{v.city}</td>
-                  <td>
-                    <span className="tag-field">{v.fieldCategory}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-
+        <div className="volunteer-grid">
+          {activeVolunteers.map((v) => (
+            <div key={v.id} className="volunteer-card">
+              <div className="volunteer-image-container">
+                <img src={v.photo} alt={v.name} className="volunteer-image" />
+              </div>
+              <div className="volunteer-info">
+                <h3 className="volunteer-name">{v.name}</h3>
+                <div className="volunteer-team">
+                  <i className="fas fa-users"></i> {v.teamName}
+                </div>
+                <div className="volunteer-city">
+                  <i className="fas fa-map-marker-alt"></i> {v.city}
+                </div>
+                <div className="volunteer-activities">
+                  <div className="volunteer-activities-label">Activities conducted</div>
+                  {v.activities}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </main>

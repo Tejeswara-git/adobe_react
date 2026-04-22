@@ -17,32 +17,34 @@ const AlumniPage = () => {
           </p>
         </div>
 
-        <div className="demo-table-container">
-          <table className="demo-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>City</th>
-                <th>Previously Chose</th>
-              </tr>
-            </thead>
-            <tbody>
-              {alumni.map((a) => (
-                <tr key={a.id}>
-                  <td><strong>{a.name}</strong></td>
-                  <td>{a.city}</td>
-                  <td>
-                    <span className="tag-field">{a.fieldCategory}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="volunteer-grid">
+          {alumni.map((a) => (
+            <div key={a.id} className="volunteer-card">
+              <div className="volunteer-image-container">
+                <img src={a.photo} alt={a.name} className="volunteer-image" />
+              </div>
+              <div className="volunteer-info">
+                <h3 className="volunteer-name">{a.name}</h3>
+                <div className="volunteer-team">
+                  <i className="fas fa-history"></i> {a.teamName}
+                </div>
+                <div className="volunteer-city">
+                  <i className="fas fa-map-marker-alt"></i> {a.city}
+                </div>
+                <div className="volunteer-activities">
+                  <div className="volunteer-activities-label">Impact Legacy</div>
+                  {a.activities}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>Were you once a part of ADORE? We'd love to reconnect!</p>
-
+        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+          <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
+            Were you once a part of ADORE? We'd love to reconnect!
+          </p>
+          <a href="#contact" className="btn-primary">Get in Touch</a>
         </div>
       </div>
     </main>
