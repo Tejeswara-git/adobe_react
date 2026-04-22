@@ -65,7 +65,7 @@ function App() {
   const activitiesRef = useRef(null);
 
   const isSubpage = currentPage.startsWith('#/');
-  const currentRoute = currentPage.replace('#', '');
+  const [currentRoute, queryString] = currentPage.replace('#', '').split('?');
   const CurrentPageComponent = pageRoutes[currentRoute];
 
   useEffect(() => {

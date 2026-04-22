@@ -2,7 +2,14 @@ import React, { useState, useEffect } from 'react';
 import webinarDataFallback from '../../backend_dynamic/webinars.json';
 
 const WebinarsPage = () => {
-  const [activeTab, setActiveTab] = useState('upcoming');
+  const getInitialTab = () => {
+    const hash = window.location.hash;
+    const params = new URLSearchParams(hash.split('?')[1]);
+    const type = params.get('type');
+    return (type === 'upcoming' || type === 'past') ? type : 'upcoming';
+  };
+
+  const [activeTab, setActiveTab] = useState(getInitialTab());
   const [webinars, setWebinars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -12,6 +19,20 @@ const WebinarsPage = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const API_URL = 'http://localhost:5000/api/webinars';
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      const params = new URLSearchParams(hash.split('?')[1]);
+      const type = params.get('type');
+      if (type && (type === 'upcoming' || type === 'past')) {
+        setActiveTab(type);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   useEffect(() => {
     fetchWebinars();
@@ -93,13 +114,19 @@ const WebinarsPage = () => {
         <div className="tab-nav">
           <button 
             className={`tab-btn ${activeTab === 'upcoming' ? 'active' : ''}`}
-            onClick={() => setActiveTab('upcoming')}
+            onClick={() => {
+              window.location.hash = '#/webinars?type=upcoming';
+              setActiveTab('upcoming');
+            }}
           >
             Upcoming Webinars
           </button>
           <button 
             className={`tab-btn ${activeTab === 'past' ? 'active' : ''}`}
-            onClick={() => setActiveTab('past')}
+            onClick={() => {
+              window.location.hash = '#/webinars?type=past';
+              setActiveTab('past');
+            }}
           >
             Past Webinars
           </button>
@@ -133,18 +160,56 @@ const WebinarsPage = () => {
                     </div>
                   </div>
                   {activeTab === 'upcoming' ? (
-                    <div className="webinar-actions">
+                    <div className="webinar-actions" style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
                       <button 
-                        className="btn-primary full-width" 
+                        className="btn-primary" 
+                        style={{ flex: 1 }}
                         onClick={() => handleRegisterClick(webinar)}
                       >
                         Register Now
                       </button>
+                      {webinar.reportUrl && (
+                        <a 
+                          href={webinar.reportUrl} 
+                          className="btn-secondary" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          style={{ flex: 1, textAlign: 'center', textDecoration: 'none', padding: '0.6rem', borderRadius: '8px', fontSize: '0.9rem' }}
+                        >
+                          Webinar Report
+                        </a>
+                      )}
                     </div>
                   ) : (
-                    <p className="webinar-summary" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-                      {webinar.summary}
-                    </p>
+                    <>
+                      <p className="webinar-summary" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', marginBottom: '1rem' }}>
+                        {webinar.summary}
+                      </p>
+                      <div className="webinar-actions" style={{ display: 'flex', gap: '0.5rem' }}>
+                        {webinar.watchUrl && (
+                          <a 
+                            href={webinar.watchUrl} 
+                            className="btn-primary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            style={{ flex: 1, textAlign: 'center', textDecoration: 'none', padding: '0.6rem', borderRadius: '8px', fontSize: '0.9rem' }}
+                          >
+                            Watch Now
+                          </a>
+                        )}
+                        {webinar.reportUrl && (
+                          <a 
+                            href={webinar.reportUrl} 
+                            className="btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            style={{ flex: 1, textAlign: 'center', textDecoration: 'none', padding: '0.6rem', borderRadius: '8px', fontSize: '0.9rem' }}
+                          >
+                            Webinar Report
+                          </a>
+                        )}
+                      </div>
+                    </>
                   )}
                 </div>
               </article>

@@ -6,7 +6,8 @@
       "speaker": "Dr. Sarah Johnson",
       "poster": "/images/a11.jpg",
       "date": "2026-05-15",
-      "time": "5:00 PM IST"
+      "time": "5:00 PM IST",
+      "reportUrl": "#"
     },
     {
       "id": "w2",
@@ -14,7 +15,8 @@
       "speaker": "Prof. David Miller",
       "poster": "/images/a13.jpg",
       "date": "2026-06-02",
-      "time": "6:30 PM IST"
+      "time": "6:30 PM IST",
+      "reportUrl": "#"
     }
   ],
   "past": [
@@ -24,7 +26,9 @@
       "speaker": "Ms. Anjali Rao",
       "poster": "/images/a14.jpg",
       "date": "2026-03-20",
-      "summary": "Explored strategies to provide quality education in remote areas using technology."
+      "summary": "Explored strategies to provide quality education in remote areas using technology.",
+      "reportUrl": "#",
+      "watchUrl": "https://youtube.com"
     },
     {
       "id": "p2",
@@ -32,7 +36,9 @@
       "speaker": "Mr. Robert Chen",
       "poster": "/images/a15.jpg",
       "date": "2026-02-10",
-      "summary": "Discussed how grassroots organizations can drive meaningful change in local communities."
+      "summary": "Discussed how grassroots organizations can drive meaningful change in local communities.",
+      "reportUrl": "#",
+      "watchUrl": "https://youtube.com"
     }
   ],
   "registrations": []

@@ -60,12 +60,12 @@ const dropdownMenus = [
     ],
   },
   {
-    label: 'Webinars',
-    href: '#Webinars',
-    key: 'webinars',
+    label: 'Activities',
+    href: '#Activities',
+    key: 'activities',
     items: [
-      { label: 'Upcoming Webinars', href: '#/upcoming-webinars', page: '/upcoming-webinars' },
-      { label: 'Past Webinars', href: '#/past-webinars', page: '/past-webinars' },
+      { label: 'Upcoming Webinars', href: '#/webinars?type=upcoming', page: '/webinars/upcoming' },
+      { label: 'Past Webinars', href: '#/webinars?type=past', page: '/webinars/past' },
     ],
   },
   {
