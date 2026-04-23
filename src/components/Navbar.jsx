@@ -134,10 +134,12 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
   const hasSolidBackground = solidNavbarPages.includes(currentPage);
   const isProgramPage = programPages.includes(currentPage);
 
+  const isHomePage = currentPage === 'home' || !currentPage;
+
   return (
     <>
       <nav
-        className={`navbar ${scrolled ? 'scrolled' : ''} top ${hasSolidBackground ? 'solid' : ''} ${isProgramPage ? 'program-page' : ''}`}
+        className={`navbar ${scrolled ? 'scrolled' : ''} top ${hasSolidBackground ? 'solid' : ''} ${isProgramPage ? 'program-page' : ''} ${isHomePage ? 'home' : ''}`}
         id="navbar"
       >
         <div className="nav-container">
