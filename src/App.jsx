@@ -31,6 +31,8 @@ import ReflectionsPage from './components/pages/Reflections';
 import FaqsPage from './components/pages/Faqs';
 import GrowingTogether from './components/pages/GrowingTogether';
 import AdorableKidsMagazine from './components/pages/AdorableKidsMagazine';
+import Newsletters from './components/pages/Newsletters';
+import WorkshopOthers from './components/pages/WorkshopOthers';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -45,6 +47,7 @@ const pageRoutes = {
   '/workshop-school': WorkshopSchool,
   '/workshop-senior': WorkshopSenior,
   '/workshop-homemakers': WorkshopHomemaker,
+  '/workshop-others': WorkshopOthers,
   '/active-volunteer': ActiveVolunteerPage,
   '/alumni': AlumniPage,
   '/associate-center': AssociateCenterPage,
@@ -52,6 +55,7 @@ const pageRoutes = {
   '/faqs': FaqsPage,
   '/growing-together': GrowingTogether,
   '/adorable-kids-magazine': AdorableKidsMagazine,
+  '/publications-newsletter': Newsletters,
 };
 
 function App() {

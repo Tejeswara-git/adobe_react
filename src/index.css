@@ -1068,7 +1068,7 @@ h5 {
 }
 
 .magazine-hero {
-  padding: 120px 0 80px;
+  padding: 60px 60px;
   position: relative;
   overflow: hidden;
 }
@@ -1086,7 +1086,7 @@ h5 {
   gap: 3rem;
   align-items: center;
   justify-content: space-between;
-  min-height: 70vh;
+  min-height: 40vh;
 }
 
 .magazine-copy {
@@ -2506,6 +2506,91 @@ h5 {
   }
 
 }
+/* Newsletters start */
+
+
+.newsletters-page {
+  padding: 180px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.newsletters-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple) transparent;
+}
+
+.newsletter-card {
+  flex-shrink: 0;
+  width: 300px;
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.2);
+}
+
+.newsletter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.newsletter-month {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.newsletter-year {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.newsletter-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.pdf-viewer {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.close-pdf {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--purple);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .newsletters-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Newsletter End */
 
 /* ============================================================
    FAQ SECTION
