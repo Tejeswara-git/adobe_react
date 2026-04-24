@@ -33,12 +33,14 @@ import GrowingTogether from './components/pages/GrowingTogether';
 import AdorableKidsMagazine from './components/pages/AdorableKidsMagazine';
 import Newsletters from './components/pages/Newsletters';
 import WorkshopOthers from './components/pages/WorkshopOthers';
+import AllWebinars from './components/pages/AllWebinars';
 
 const pageRoutes = {
   '/about': AboutPage,
   '/team': TeamPage,
   '/young-leaders': YoungLeadersPage,
   '/webinars': WebinarsPage,
+  '/all-webinars': AllWebinars,
   '/workshops': WorkshopsPage,
   '/e-sessions': ESessionsPage,
   '/sunshine': SunshinePage,

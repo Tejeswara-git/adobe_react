@@ -16,20 +16,7 @@ const dropdownMenus = [
     key: 'programs',
     items: [
       { label: 'Young Leaders', href: '#/young-leaders', page: '/young-leaders' },
-      {
-        label: 'Webinars',
-        href: '#/webinars',
-        page: '/webinars',
-        subItems: [
-          { label: 'Synergy', href: '#/webinars/synergy', page: '/webinars/synergy' },
-          { label: 'Soaring Wings', href: '#/webinars/soaring-wings', page: '/webinars/soaring-wings' },
-          { label: 'GYPSE', href: '#/webinars/gypse', page: '/webinars/gypse' },
-          { label: 'Wise Talk', href: '#/webinars/wise-talk', page: '/webinars/wise-talk' },
-          { label: 'Xper Talk', href: '#/webinars/xper-talk', page: '/webinars/xper-talk' },
-          { label: 'Young Leader Speak', href: '#/webinars/young-leader-speak', page: '/webinars/young-leader-speak' },
-          { label: 'Youth Impact', href: '#/webinars/youth-impact', page: '/webinars/youth-impact' },
-        ],
-      },
+      { label: 'All Webinars', href: '#/all-webinars', page: '/all-webinars' },
       {
         label: 'Workshops',
         href: '#/workshops',
@@ -60,9 +47,9 @@ const dropdownMenus = [
     ],
   },
   {
-    label: 'Activities',
-    href: '#Activities',
-    key: 'activities',
+    label: 'Webinars',
+    href: '#webinars',
+    key: 'webinars',
     items: [
       { label: 'Upcoming Webinars', href: '#/webinars?type=upcoming', page: '/webinars/upcoming' },
       { label: 'Past Webinars', href: '#/webinars?type=past', page: '/webinars/past' },

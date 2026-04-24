@@ -3,7 +3,8 @@
    =========================== */
 
 
-   html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
 }
@@ -261,7 +262,7 @@ h5 {
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 6px 20px;
-    background: #2b4c6f;
+  background: #2b4c6f;
 
 }
 
@@ -302,11 +303,11 @@ h5 {
   display: flex;
   gap: 10px;
   font-size: 1rem;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
 }
 
 .top-right i {
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 
@@ -628,6 +629,7 @@ h5 {
   color: var(--purple);
   background: rgba(14, 165, 233, 0.08);
 }
+
 /* --- Flyout Sub-menu (e.g. Webinars inside Programs) --- */
 .nav-flyout-wrapper {
   position: relative;
@@ -819,12 +821,12 @@ h5 {
     bottom: 0;
     padding: 12px 0;
   }
-  
+
   .secondary-nav-container {
     gap: 1rem;
     flex-wrap: wrap;
   }
-  
+
   .secondary-nav-link {
     font-size: 0.7rem;
   }
@@ -1064,7 +1066,7 @@ h5 {
   grid-template-columns: repeat(3, minmax(180px, 1fr));
   gap: 1.5rem;
   margin: 0 auto;
-  width:fit-content;
+  width: fit-content;
   justify-content: center;
 }
 
@@ -1083,7 +1085,7 @@ h5 {
 }
 
 .select-wrapper:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(14, 165, 233, 0.5);
   background: linear-gradient(135deg, #38bdf8, var(--purple-light));
 }
@@ -1122,7 +1124,7 @@ h5 {
   transition: transform 0.2s ease;
 }
 
-.select-wrapper select:focus + ::after,
+.select-wrapper select:focus+ ::after,
 .select-wrapper:hover::after {
   transform: translateY(-50%) rotate(180deg);
 }
@@ -1215,7 +1217,7 @@ h5 {
 
 .magazine-card:hover {
   border-color: rgba(14, 165, 233, 0.3);
-  box-shadow:0 25px 60px rgba(4, 66, 151, 0.3);
+  box-shadow: 0 25px 60px rgba(4, 66, 151, 0.3);
   transform: translateY(-3px);
 }
 
@@ -1504,9 +1506,9 @@ h5 {
 .stat-item {
   text-align: center;
   padding: 0 1.5rem;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stat-number {
@@ -1537,12 +1539,12 @@ h5 {
   margin-top: 2px;
 }
 
-.stat-value{
-  display:flex;
-  align-items:center;
-  gap:4px;
-  font-size:28px;
-  font-weight:700;
+.stat-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 
@@ -2473,7 +2475,7 @@ h5 {
 
 /* Volunteer Form */
 .volunteer-form {
-   background: var(--bg-card);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
@@ -2482,7 +2484,7 @@ h5 {
 }
 
 .form-row {
-   display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: start;
@@ -2566,6 +2568,7 @@ h5 {
   }
 
 }
+
 /* Newsletters start */
 
 
@@ -2883,6 +2886,7 @@ h5 {
 }
 
 @media (max-width: 900px) {
+
   .faq-grid,
   .faq-form-section,
   .faq-form .form-row {
@@ -4036,17 +4040,26 @@ h5 {
   animation: emptyBounce 1.4s infinite ease-in-out both;
 }
 
-.empty-circle:nth-child(1) { animation-delay: -0.32s; }
-.empty-circle:nth-child(2) { animation-delay: -0.16s; }
+.empty-circle:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.empty-circle:nth-child(2) {
+  animation-delay: -0.16s;
+}
 
 @keyframes emptyBounce {
-  0%, 80%, 100% { 
-    transform: scale(0); 
-    opacity: 0.3; 
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.3;
   }
-  40% { 
-    transform: scale(1); 
-    opacity: 1; 
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -4251,4 +4264,517 @@ h5 {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-top: 0.4rem;
+}
+
+/* ============================================================
+   ALL WEBINARS (Programs Overview) PAGE
+   ============================================================*/
+
+/* ───── Page Background ───── */
+.all-webinars-page {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(14, 165, 233, 0.07), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(249, 115, 22, 0.05), transparent 35%),
+    var(--bg-dark);
+}
+
+/* ───── Hero ───── */
+.aw-hero {
+  padding-bottom: 0;
+}
+
+.aw-hero .section-header {
+  margin-bottom: 2.5rem;
+}
+
+/* ───── Pill / Tab Navigation ───── */
+.aw-pills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 24px 1.2rem;
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin: 0 -24px;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.06);
+}
+
+/* Single pill button */
+.aw-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  border-radius: 100px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(14, 165, 233, 0.06);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.aw-pill:hover {
+  color: var(--purple);
+  background: rgba(14, 165, 233, 0.12);
+  border-color: rgba(14, 165, 233, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.12);
+}
+
+/* Active pill — uses site primary blue */
+.aw-pill.active {
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: #fff;
+  border-color: var(--purple);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ───── Programs Section ───── */
+.aw-programs {
+  padding: 3rem 0 5rem;
+}
+
+/* ───── Program Block (Card) ───── */
+.aw-program-block {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  overflow: hidden;
+  animation: awFadeInUp 0.6s ease-out backwards;
+}
+
+/* Base animation for cards on load */
+@keyframes awFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover lift */
+.aw-program-block:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* ───── Top Accent Bar ───── */
+.aw-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--purple), var(--orange));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* ───── Number Badge (watermark) ───── */
+.aw-number {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.6rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(14, 165, 233, 0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ───── Two-Column Grid (Content + Image) ───── */
+.aw-block-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Reversed = image on left, content on right */
+.aw-block-grid.aw-reversed {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.aw-block-grid.aw-reversed .aw-block-image {
+  order: -1;
+}
+
+/* ───── Image Column ───── */
+.aw-block-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.aw-program-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(14, 165, 233, 0.12);
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.aw-program-block:hover .aw-program-img {
+  transform: scale(1.04);
+}
+
+/* ───── Content Column ───── */
+.aw-block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* 1. Title — big, bold */
+.aw-program-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+
+/* Subtitle expansion (e.g. GYPSE) */
+.aw-program-fulltitle {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--purple);
+  margin-bottom: 0.5rem;
+}
+
+/* 2. Description — highlighted accent */
+.aw-program-desc {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--purple);
+  padding: 0.65rem 1rem;
+  background: rgba(14, 165, 233, 0.06);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1rem;
+}
+
+/* 3. About the Program */
+.aw-about {
+  margin-bottom: 1rem;
+}
+
+.aw-about-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.aw-about-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* 4. Objectives — icon bullets */
+.aw-objectives {
+  margin-bottom: 1.2rem;
+}
+
+.aw-objectives-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.aw-objectives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aw-objective-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--bg-card2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.aw-objective-item:hover {
+  background: rgba(14, 165, 233, 0.06);
+  border-color: rgba(14, 165, 233, 0.2);
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.08);
+}
+
+/* Icon circle */
+.aw-obj-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--purple);
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  transition: var(--transition);
+}
+
+.aw-objective-item:hover .aw-obj-icon {
+  background: rgba(14, 165, 233, 0.18);
+  transform: scale(1.1);
+}
+
+.aw-obj-text {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ───── Action Buttons ───── */
+.aw-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* Primary button */
+.aw-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  font-family: 'Outfit', sans-serif;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.aw-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+  background: linear-gradient(135deg, #38bdf8, var(--purple));
+  color: #fff;
+}
+
+/* Outline secondary button */
+.aw-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  color: var(--purple);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  font-family: 'Outfit', sans-serif;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+}
+
+.aw-btn-outline:hover {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.12);
+}
+
+/* ============================================================
+   RESPONSIVE — ALL WEBINARS
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .aw-program-block {
+    padding: 2rem 1.8rem;
+  }
+
+  .aw-block-grid,
+  .aw-block-grid.aw-reversed {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aw-program-img {
+    max-height: 320px;
+  }
+
+  .aw-number {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aw-pills-wrapper {
+    top: 70px;
+    gap: 0.4rem;
+    padding: 0.7rem 16px;
+    margin: 0 -16px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .aw-pills-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aw-pill {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
+  .aw-program-block {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .aw-block-grid,
+  .aw-block-grid.aw-reversed {
+    grid-template-columns: 1fr;
+  }
+
+  .aw-block-grid.aw-reversed .aw-block-image {
+    order: 0;
+  }
+
+  .aw-program-img {
+    max-height: 280px;
+  }
+
+  .aw-program-title {
+    font-size: 1.4rem;
+  }
+
+  .aw-number {
+    font-size: 2rem;
+    top: 0.8rem;
+    right: 1rem;
+  }
+
+
+
+  .aw-actions {
+    flex-direction: column;
+  }
+
+  .aw-actions .aw-btn-primary,
+  .aw-actions .aw-btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+  .aw-pills-wrapper {
+    top: 70px;
+    padding: 0.5rem 12px;
+    margin: 0 -12px;
+  }
+
+  .aw-pill {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .aw-program-block {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .aw-program-img {
+    max-height: 220px;
+  }
+
+  .aw-program-title {
+    font-size: 1.25rem;
+  }
+
+  .aw-program-desc {
+    font-size: 0.88rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .aw-objective-item {
+    padding: 0.5rem 0.7rem;
+    gap: 0.6rem;
+  }
+
+  .aw-obj-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .aw-obj-text {
+    font-size: 0.85rem;
+  }
+
+  .aw-number {
+    font-size: 1.6rem;
+  }
 }
