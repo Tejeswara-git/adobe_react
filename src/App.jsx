@@ -34,6 +34,7 @@ import AdorableKidsMagazine from './components/pages/AdorableKidsMagazine';
 import Newsletters from './components/pages/Newsletters';
 import WorkshopOthers from './components/pages/WorkshopOthers';
 import AllWebinars from './components/pages/AllWebinars';
+import YipsPage from './components/pages/YipsPage';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -58,6 +59,7 @@ const pageRoutes = {
   '/growing-together': GrowingTogether,
   '/adorable-kids-magazine': AdorableKidsMagazine,
   '/publications-newsletter': Newsletters,
+  '/yips': YipsPage,
 };
 
 function App() {

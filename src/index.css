@@ -4778,3 +4778,335 @@ h5 {
     font-size: 1.6rem;
   }
 }
+
+/* ============================================================
+   YIPs (Youth Involvement Program) Page CSS
+   ============================================================ */
+
+.yips-page {
+  padding-top: 80px;
+  background: var(--bg-dark);
+}
+
+.yips-section {
+  padding: 5rem 0;
+}
+
+.yips-section.alt-bg {
+  background: var(--bg-dark2);
+}
+
+/* Hero Section */
+.yips-hero {
+  position: relative;
+  padding: 8rem 0 6rem;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(56, 189, 248, 0.1) 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+.yips-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.yips-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.yips-hero-text .section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.yips-hero-text .section-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.yips-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Grids */
+.yips-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.why-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.opp-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Cards */
+.yips-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.yips-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--purple), var(--purple-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.yips-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  border-color: var(--border-hover);
+}
+
+.yips-card:hover::before {
+  transform: scaleX(1);
+}
+
+.yips-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  background: var(--bg-dark2);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1);
+}
+
+.yips-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.yips-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Steps (How it Works) */
+.yips-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.yips-steps-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  width: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.yips-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.yips-step:hover {
+  transform: translateX(10px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.yips-step-num {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  margin-left: -17px;
+}
+
+.yips-step-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  margin-top: 10px;
+}
+
+.yips-step-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .yips-steps-container::before {
+    display: none;
+  }
+
+  .yips-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .yips-step-num {
+    margin-left: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .yips-step:hover {
+    transform: translateY(-5px) translateX(0);
+  }
+}
+
+/* Split Layout */
+.yips-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .yips-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.yips-split-card {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.yips-split-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.yips-split-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.yips-split-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--purple);
+  border-radius: 2px;
+}
+
+.yips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.yips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.yips-list li span {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.yips-cta-section {
+  background: linear-gradient(135deg, var(--text-primary), #1e293b);
+  padding: 6rem 0;
+  text-align: center;
+  color: white;
+}
+
+.yips-cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.yips-cta-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.yips-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.yips-cta-buttons .btn-primary {
+  background: white;
+  color: var(--purple-dark);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.yips-cta-buttons .btn-primary:hover {
+  background: var(--bg-dark2);
+  transform: translateY(-3px);
+}
