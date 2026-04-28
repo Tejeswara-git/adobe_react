@@ -35,6 +35,9 @@ import Newsletters from './components/pages/Newsletters';
 import WorkshopOthers from './components/pages/WorkshopOthers';
 import AllWebinars from './components/pages/AllWebinars';
 import YipsPage from './components/pages/YipsPage';
+import Feedback from './components/pages/Feedback';
+import Blogs from './components/pages/Blogs';
+import BlogDetail from './components/pages/BlogDetail';
 
 const pageRoutes = {
   '/about': AboutPage,
@@ -60,6 +63,9 @@ const pageRoutes = {
   '/adorable-kids-magazine': AdorableKidsMagazine,
   '/publications-newsletter': Newsletters,
   '/yips': YipsPage,
+  '/feedback': Feedback,
+  '/blogs': Blogs,
+  '/blog-detail': BlogDetail,
 };
 
 function App() {
@@ -207,7 +213,7 @@ function App() {
   return (
     <div className="App">
       <Navbar scrolled={scrolled} activeSection={activeSection} currentPage={currentRoute} />
-      {/* <SecondaryNavbar scrolled={scrolled} currentPage={currentRoute} /> */} 
+      {/* <SecondaryNavbar scrolled={scrolled} currentPage={currentRoute} /> */}
       {isSubpage && CurrentPageComponent ? (
         <CurrentPageComponent />
       ) : (
