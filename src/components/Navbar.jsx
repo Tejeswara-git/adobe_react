@@ -137,7 +137,7 @@ const Navbar = ({ scrolled, activeSection, currentPage }) => {
           <div className={`nav-links ${navOpen ? 'open' : ''}`} id="nav-links">
             <a
               href="#home"
-              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
+              className={`nav-link ${currentPage === '/' || currentPage === 'home' ? 'active' : ''}`}
               onClick={() => setNavOpen(false)}
             >
               Home

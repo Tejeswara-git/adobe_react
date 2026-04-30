@@ -19,15 +19,6 @@ const reflections = [
     description: 'February brings focus to the connections we build with our community. Through meaningful interactions, we create lasting positive change.',
     highlights: ['Connection', 'Growth', 'Unity']
   },
-    {
-    id: 3,
-    month: 'February',
-    year: 2024,
-    title: 'Community Impact',
-    image: '/images/reflections-february.png',
-    description: 'February brings focus to the connections we build with our community. Through meaningful interactions, we create lasting positive change.',
-    highlights: ['Connection', 'Growth', 'Unity']
-  },
 ];
 
 const Reflections = () => {
