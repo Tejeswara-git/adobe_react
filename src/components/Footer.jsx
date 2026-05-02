@@ -16,22 +16,22 @@ const Footer = () => {
                     <div className="footer-links-group">
                         <h5>Programs</h5>
                         <ul>
-                            <li><a href="#programs">Idea Incubator</a></li>
-                            <li><a href="#programs">Leadership Camp</a></li>
-                            <li><a href="#programs">Green Futures</a></li>
-                            <li><a href="#programs">Creative Arts Hub</a></li>
-                            <li><a href="#programs">Tech for Good</a></li>
+                            <li><a href="#/young-leaders">Young Leader</a></li>
+                            <li><a href="#/all-webinars">All Webinars</a></li>
+                            <li><a href="#/webinars">Upcoming Webinar</a></li>
+                            <li><a href="#/e-sessions">E-Session</a></li>
+                            <li><a href="#/workshop-college">Workshops</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-links-group">
                         <h5>Organisation</h5>
                         <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#releases">Releases</a></li>
-                            <li><a href="#activities">Impact</a></li>
-                            <li><a href="#participate">Participate</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#/about">About Us</a></li>
+                            <li><a href="#/team">Team</a></li>
+                            <li><a href="#/blogs">Blogs</a></li>
+                            <li><a href="#/active-volunteer">Active Volunteers</a></li>
+                            <li><a href="#/contact">Contact</a></li>
                         </ul>
                     </div>
 

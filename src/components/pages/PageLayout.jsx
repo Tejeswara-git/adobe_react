@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
 const PageLayout = ({ eyebrow, title, description, highlights = [], highlightDetails = [], image, ctaLabel, ctaHref = '#contact' }) => {
-  const [activeHighlight, setActiveHighlight] = useState(null);
+  const [activeHighlight, setActiveHighlight] = useState(() => {
+    if (highlights && highlights.length > 0) {
+      const first = highlights[0];
+      return highlightDetails.find(d => d.id === first || d.title === first) || null;
+    }
+    return null;
+  });
 
   const handleHighlightClick = (item) => {
     const details = highlightDetails.find(d => d.id === item || d.title === item);
@@ -49,29 +55,30 @@ const PageLayout = ({ eyebrow, title, description, highlights = [], highlightDet
 
       {activeHighlight && (
         <section className="highlight-details-section">
-          <div className="section-container highlight-details-grid">
-            <div className="highlight-details-content">
-              <h2>{activeHighlight.title}</h2>
-              <p>{activeHighlight.description}</p>
-              {activeHighlight.additionalInfo && (
-                <p>{activeHighlight.additionalInfo}</p>
-              )}
-              {activeHighlight.topics && activeHighlight.topics.length > 0 && (
-                <>
-                  <h3>Topics Covered</h3>
-                  <ul className="topics-list">
-                    {activeHighlight.topics.map(topic => (
-                      <li key={topic}>{topic}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
-            {activeHighlight.image && (
-              <div className="highlight-details-image">
-                <img src={activeHighlight.image} alt={activeHighlight.title} />
+          <div className="section-container">
+            <div 
+              className="highlight-details-card" 
+              style={{ backgroundImage: `url('${activeHighlight.image}')` }}
+            >
+              <div className="highlight-details-overlay"></div>
+              <div className="highlight-details-content">
+                <h2>{activeHighlight.title}</h2>
+                <p className="highlight-desc">{activeHighlight.description}</p>
+                {activeHighlight.additionalInfo && (
+                  <p className="highlight-additional-info">{activeHighlight.additionalInfo}</p>
+                )}
+                {activeHighlight.topics && activeHighlight.topics.length > 0 && (
+                  <div className="topics-wrapper">
+                    <h3>Topics Covered</h3>
+                    <ul className="topics-list">
+                      {activeHighlight.topics.map(topic => (
+                        <li key={topic}>{topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </section>
       )}
